@@ -4,9 +4,9 @@ function bestellingAantal(bestellingSoort){
 }
 var bestelling=prompt('Welke bestelling wilt u toevoegen? Kies uit: fris, bier of wijn. Typ stop als u de rekening wilt.');
 if(bestelling=='fris'){
-	bestellingAantal(fris);
-}if else(bestelling=='bier'){
-	bestellingAantal(bier);
-}if else(bestelling=='wijn'){
-	bestellingAantal(wijn);
+	bestellingAantal('fris');
+}else if(bestelling=='bier'){
+	bestellingAantal('bier');
+}else if(bestelling=='wijn'){
+	bestellingAantal('wijn');
 }
