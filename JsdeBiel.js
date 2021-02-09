@@ -21,6 +21,13 @@ function bestellingToevoegen(){ //door deze functie kan de klant z'n bestelling 
 		aantalWijn=prompt('Hoeveel wijn wilt u toevoegen aan uw bestelling? $2,99 per stuk.');
 	}else if(bestelling=='snack'){
 		aantalSnack=prompt('Hoeveel bitterballen wilt u toevoegen (8 of 16)?');
+		if(aantalSnack=='8'){
+			bitterbalschalen8=prompt('Hoeveel bitterbalschalen van 8 wilt u bestellen?');
+		}else if(aantalSnack=='16'){
+			bitterbalschalen16=prompt('Hoeveel bitterbalschalen van 16 wilt u bestellen?');
+		}else{
+			alert('U kunt alleen een keuze maken tussen 8 en 16. De snacks zijn niet toegevoegd aan de bestelling.');
+		}
 	}else if(bestelling=='stop'){
 		stop=1
 	}else{
@@ -35,14 +42,7 @@ function price(){ //deze functie rekent de kostten uit die de klant moet betalen
 	priceSnack16=bitterbalschalen16*9.99
 }
 function rekening(){ //deze functie zet de rekening op het scherm
-	if(aantalSnack=='8'){
-		bitterbalschalen8=prompt('Hoeveel bitterbalschalen van 8 wilt u bestellen?');
-	}if(aantalSnack=='16'){
-		bitterbalschalen16=prompt('Hoeveel bitterbalschalen van 16 wilt u bestellen?');
-	}else if(aantalSnack=0){
-		alert('U kunt alleen een keuze maken tussen 8 en 16. De snacks zijn niet toegevoegd aan de bestelling.');
-		bestellingToevoegen();
-	}if(aantalFris!=0){
+	if(aantalFris!=0){
 		document.write('U heeft '+aantalFris+' fris besteld voor $'+priceFris+' ($1,49 per stuk).<br>');
 	}if(aantalBier!=0){
 		document.write('U heeft '+aantalBier+' bier besteld voor $'+priceBier+' ($1,99 per stuk).<br>');
