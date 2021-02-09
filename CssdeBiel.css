@@ -1,0 +1,14 @@
+body{
+	background-color:lightgray;
+	color:darkblue;
+	font-size:30px;
+	margin:10px;
+}
+img{
+	float:right;
+	width:750px;
+	border:2px solid black;
+	outline-style:solid;
+	outline-color:gray;
+	outline-width:8px;
+}
